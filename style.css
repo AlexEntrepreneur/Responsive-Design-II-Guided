@@ -104,12 +104,6 @@ header nav .first-anchor {
   margin-bottom: 20px;
 }
 
-/* @media (max-width: 515px) {
-  .plane-img {
-    display: none;
-  }
-} */
-
 button {
   display: inline-block;
   border: unset;
@@ -216,17 +210,5 @@ button {
 .box {
   border: 3px solid royalblue;
   margin: 6px;
-  /* font-size: 10px; */
-}
-
-.child-item {
-
-}
-
-.grandchild-item {
-
-}
-
-.great-grandchild-item {
-
+  font-size: 100%;
 }
