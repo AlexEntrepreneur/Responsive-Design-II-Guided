@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+/* Notes
+
+px
+- responsive to a browser zoom but not to a user's settings
+- can be used in box model
+- mainly used for fonts
+
+em (Find the parent of the p tag to see the difference!)
+- takes on its parent's font-size
+- responsive unit
+- can be used in box model
+- mainly used for fonts
+
+rem (root em)
+- takes on the root element's font-size
+- responsive unit
+- can be used in box model
+
+vw (viewport width)
+- respond to the viewport not font-sizes
+- Up to 100 (100/100 for screen viewport width)
+- not a good idea to use them for everything in layout
+
+vh (viewport height)
+- respond to the viewport not font-sizes
+- Up to 100 (100/100 for screen viewport height)
+- not a good idea to use them for everything in layout
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* General Styles */
+html {
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: 20px;
+  margin: unset;
+  font-weight: 900;
+}
+
+p {
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  border-bottom: 1px solid #313131;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
+strong {
+  font-weight: bold;
+  color: royalblue;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 515px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+@media (max-width: 515px) {
+  header h1 {
+    margin-bottom: 20px;
+  }
+}
+
+header nav a {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+header nav .first-anchor {
+  margin-left: 0;
+}
+
+.plane-img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* @media (max-width: 515px) {
+  .plane-img {
+    display: none;
+  }
+} */
+
+button {
+  display: inline-block;
+  border: unset;
+  padding: 8px;
+  margin-bottom: 30px;
+  background-color: royalblue;
+  color: white;
+}
+
+/* Desktop-first approach */
+.book-flight-btn {
+  min-width: 150px;
+  background-color: #FFBF27;
+}
+
+@media (max-width: 515px) {
+  .book-flight-btn {
+    width: 90%;
+    height: 50px;
+    font-size: 25px;
+    margin: 0 auto 30px auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .book-flight-btn {
+    background-color: royalblue;
+    border: 3px solid black;
+  }
+}
+
+/* Mobile-first approach */
+.book-flight-btn-mobile {
+  display: block;
+  background-color: #FFBF27;
+  width: 90%;
+  height: 50px;
+  font-size: 25px;
+}
+
+@media (min-width: 515px) {
+  .book-flight-btn-mobile {
+    max-width: 200px;
+    font-size: inherit;
+    margin: unset;
+    height: unset;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 600px) {
+  .book-flight-btn-mobile {
+    background-color: royalblue;
+    border: 5px solid black;
+  }
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content section {
+  width: calc(50% - 10px);
+  vertical-align: top;
+}
+
+@media(max-width: 515px) {
+  .main-content {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .main-content section {
+    width: 90%;
+  }
+}
+
+.main-content section:nth-of-type(odd) {
+ margin-left: 0;
+}
+
+.main-content section:nth-of-type(even) {
+  margin-right: 0;
+}
+
+.main-footer {
+  width: 40%;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 515px) {
+  .main-footer {
+    width: 90%;
+    margin: 0 auto 40px;
+  }
+}
+
+.main-footer nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  border: 3px solid royalblue;
+  margin: 6px;
+  /* font-size: 10px; */
+}
+
+.child-item {
+
+}
+
+.grandchild-item {
+
+}
+
+.great-grandchild-item {
+
+}
