@@ -34,6 +34,10 @@ vh (viewport height)
   box-sizing: border-box;
 }
 
+/* :root {
+  background: lavender;
+} */
+
 /* General Styles */
 html {
   font-family: 'Roboto';
@@ -85,7 +89,7 @@ header {
 }
 
 header h1 {
-  font-size: 20px;
+  font-size: 1.428rem;
 }
 
 @media (max-width: 515px) {
@@ -168,6 +172,7 @@ button {
 .main-content {
   display: flex;
   justify-content: space-between;
+  font-size: 1rem;
 }
 
 .main-content section {
